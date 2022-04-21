@@ -7,7 +7,7 @@ import java.math.RoundingMode;
 import java.text.NumberFormat;
 
 class Exercise13 {
-  public static void main() {    
+  public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     NumberFormat numberFormat = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
 

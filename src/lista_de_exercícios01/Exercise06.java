@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 class Exercise06 {
-  public static void main() {    
+  public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
     BigDecimal valueInBRL = scanner.nextBigDecimal();

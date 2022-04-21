@@ -13,7 +13,7 @@ class Beach {
 }
 
 class Exercise04 {
-  public static void main() {
+  public static void main(String[] args) {
     final int NUMBER_OF_BEACHES = 5;
     final double LOWER_BOUND_DISTANCE = 10;
     final double UPPER_BOUND_DISTANCE = 15;

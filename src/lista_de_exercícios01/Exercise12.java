@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.math.BigDecimal;
 
 class Exercise12 {
-  public static void main() {    
+  public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
     BigDecimal costPrice = scanner.nextBigDecimal();
