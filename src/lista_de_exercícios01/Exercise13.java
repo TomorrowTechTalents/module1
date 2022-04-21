@@ -1,4 +1,4 @@
-package com.worksheet01;
+package lista_de_exercícios01;
 
 import java.util.Locale;
 import java.util.Scanner;

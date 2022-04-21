@@ -1,4 +1,4 @@
-package com.worksheet02;
+package lista_de_exercícios02;
 
 import java.util.Scanner;
 

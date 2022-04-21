@@ -1,4 +1,4 @@
-package com.worksheet03;
+package lista_de_exercícios03;
 
 import java.util.Random;
 import java.util.Scanner;
