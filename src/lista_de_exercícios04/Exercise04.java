@@ -20,6 +20,7 @@ public class Exercise04 {
 
         System.out.println(sumOfAllValues(values));
     }
+
     static int sumOfAllValues(int[][] values) {
         int sum = 0;
         int dimension1 = values.length;
