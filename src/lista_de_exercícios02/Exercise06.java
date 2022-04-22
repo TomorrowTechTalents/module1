@@ -11,6 +11,7 @@ class Exercise06 {
     double number3 = scanner.nextDouble();
     double number4 = scanner.nextDouble();
 
-    System.out.println("soma dos quadrados: " + (number1 * number1 + number2 * number2 + number3 * number3 + number4 * number4));
+    System.out.println("soma dos quadrados: " + (number1 * number1 + number2 * number2
+                                              + number3 * number3 + number4 * number4));
   }
 }

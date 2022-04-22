@@ -8,15 +8,18 @@ class Exercise11 {
 
     int number1 = scanner.nextInt();
     int number2 = scanner.nextInt();
-    int auxNumber;
+    int largerNumber;
+    int smallerNumber;
 
     if (number1 > number2) {
-      auxNumber = number1;
-      number1 = number2;
-      number2 = auxNumber;
+      largerNumber = number1;
+      smallerNumber = number2;
+    } else {
+      largerNumber = number2;
+      smallerNumber = number1;
     }
 
-    for (int i = number1 + 1; i < number2; i++) {
+    for (int i = smallerNumber + 1; i < largerNumber; i++) {
       System.out.println(i);
     }
   }
