@@ -5,16 +5,19 @@ import java.math.BigDecimal;
 
 public class Exercise03 {
   public static void main(String[] args) {
+    final BigDecimal INTEREST_RATE = new BigDecimal("0.02");
+
     Scanner scanner = new Scanner(System.in);
 
+    System.out.print("valor inicial em reais: ");
     BigDecimal startingAmount = scanner.nextBigDecimal();
+
+    System.out.print("digite um valor inteiro para o tempo em meses: ");
     int numberOfMonths = scanner.nextInt();
 
-    final double INTEREST_RATE = 0.02;
+    BigDecimal totalInterest = (BigDecimal.ONE.add(INTEREST_RATE)).pow(numberOfMonths);
 
-    double totalInterest = Math.pow(1 + INTEREST_RATE, numberOfMonths);
-
-    BigDecimal finalAmount = startingAmount.multiply(BigDecimal.valueOf(totalInterest));
+    BigDecimal finalAmount = startingAmount.multiply(totalInterest);
 
     System.out.println("valor final: R$ " + finalAmount);
   }
