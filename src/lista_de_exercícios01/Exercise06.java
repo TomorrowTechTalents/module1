@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-class Exercise06 {
+public class Exercise06 {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 

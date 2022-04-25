@@ -3,7 +3,7 @@ package lista_de_exercícios03;
 import java.util.Locale;
 import java.util.Scanner;
 
-class Exercise01 {
+public class Exercise01 {
   public static void main(String[] args) {
     // mistério fantasmagórico
     System.out.println(Locale.getDefault());

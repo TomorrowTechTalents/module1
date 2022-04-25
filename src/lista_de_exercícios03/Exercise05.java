@@ -2,7 +2,7 @@ package lista_de_exercícios03;
 
 import java.util.Scanner;
 
-class Exercise05 {
+public class Exercise05 {
   public static void main(String[] args) {
     double LOWER_THRESHOLD = 18.5;
     double MIDDLE_THRESHOLD = 25.0;

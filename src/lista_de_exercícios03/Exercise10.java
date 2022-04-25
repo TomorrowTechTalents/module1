@@ -3,7 +3,7 @@ package lista_de_exercícios03;
 import java.util.Random;
 import java.util.Scanner;
 
-class Exercise10 {
+public class Exercise10 {
   public static void main(String[] args) {
     final int LOWER_BOUNDARY = 1;
     final int UPPER_BOUNDARY = 10;
@@ -15,25 +15,20 @@ class Exercise10 {
 
     int triesMade = 0;
 
-    for (int i = 0; i < NUMBER_OF_TRIES; i++) {
+    while (true) {
       triesMade++;
+
       int guess = scanner.nextInt();
 
       if (guess == goalNumber) {
         System.out.println("Parabéns");
 
         return;
-      }
-
-      else if (triesMade == NUMBER_OF_TRIES) {
+      } else if (triesMade == NUMBER_OF_TRIES) {
         break;
-      }
-
-      else if (guess < goalNumber) {
+      } else if (guess < goalNumber) {
         System.out.println("O número correto é maior");
-      }
-
-      else {
+      } else {
         System.out.println("O número correto é menor");
       }      
     }

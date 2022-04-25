@@ -1,7 +1,7 @@
 package lista_de_exercícios04;
 
-import java.math.BigDecimal;
 import java.util.Scanner;
+import java.math.BigDecimal;
 
 public class Exercise13 {
     public static void main(String[] args) {
@@ -14,7 +14,6 @@ public class Exercise13 {
         BigDecimal alcoholLargerDiscount = new BigDecimal("0.05");
         BigDecimal gasolineSmallerDiscount = new BigDecimal("0.04");
         BigDecimal gasolineLargerDiscount = new BigDecimal("0.06");
-
 
         BigDecimal volumeInLiters = scanner.nextBigDecimal();
         char fuel = scanner.next().charAt(0);

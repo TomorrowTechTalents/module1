@@ -2,7 +2,7 @@ package lista_de_exercícios03;
 
 import java.util.Scanner;
 
-class Exercise04 {
+public class Exercise04 {
   public static void main(String[] args) {
     final int QUANTITY_OF_NUMBERS = 5;
 
@@ -25,7 +25,7 @@ class Exercise04 {
     int auxNumber;
     boolean isSorted = false;
 
-    while (isSorted == false) {
+    while (!isSorted) {
       isSorted = true;
 
       for (int i = 0; i < size - 1; i++) {
