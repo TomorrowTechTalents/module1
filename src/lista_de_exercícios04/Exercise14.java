@@ -6,8 +6,6 @@ public class Exercise14 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-
-
         short man1Age = scanner.nextShort();
         short man2Age = scanner.nextShort();
         short woman1Age = scanner.nextShort();
