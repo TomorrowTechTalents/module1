@@ -1,6 +1,6 @@
 package lista_de_exercícios02;
 
-class Exercise03 {
+public class Exercise03 {
   public static void main(String[] args) {
     System.out.print("ALUNO(A)\t");
     System.out.println("NOTA");

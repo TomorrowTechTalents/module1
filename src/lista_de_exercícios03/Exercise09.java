@@ -2,7 +2,7 @@ package lista_de_exercícios03;
 
 import java.util.Scanner;
 
-class Exercise09 {
+public class Exercise09 {
   public static void main(String[] args) {
     final double NUMBER_OF_PEOPLE = 10;
 

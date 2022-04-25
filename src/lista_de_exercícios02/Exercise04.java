@@ -12,7 +12,7 @@ class Beach {
   }
 }
 
-class Exercise04 {
+public class Exercise04 {
   public static void main(String[] args) {
     final int NUMBER_OF_BEACHES = 5;
     final double LOWER_BOUND_DISTANCE = 10;
@@ -70,10 +70,9 @@ class Exercise04 {
   }
 
   static Beach[] addBeachInArray(Beach beach, Beach[] beachesInRange) {
-    Beach[] newArray = new Beach[beachesInRange.length + 1];    
+    Beach[] newArray = new Beach[beachesInRange.length + 1];
 
-    for (int i = 0; i < beachesInRange.length; i++)
-      newArray[i] = beachesInRange[i];
+    System.arraycopy(beachesInRange, 0, newArray, 0, beachesInRange.length);
 
     newArray[beachesInRange.length] = beach;
 

@@ -3,7 +3,7 @@ package lista_de_exercícios01;
 import java.util.Scanner;
 import java.math.BigDecimal;
 
-class Exercise12 {
+public class Exercise12 {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 

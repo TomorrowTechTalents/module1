@@ -2,7 +2,7 @@ package lista_de_exercícios03;
 
 import java.util.Scanner;
 
-class Exercise08 {
+public class Exercise08 {
   public static void main(String[] args) {
     final double QUANTITY_OF_NUMBERS = 10;
 
