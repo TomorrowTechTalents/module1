@@ -7,7 +7,10 @@ public class Exercise03 {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
+    System.out.print("digite o valor inicial: ");
     BigDecimal startingAmount = scanner.nextBigDecimal();
+
+    System.out.print("digite o número de meses: ");
     int numberOfMonths = scanner.nextInt();
 
     final double INTEREST_RATE = 0.02;

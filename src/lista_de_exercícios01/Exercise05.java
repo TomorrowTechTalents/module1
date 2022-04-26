@@ -7,6 +7,7 @@ public class Exercise05 {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
+    System.out.print("digite o valor do salário: ");
     BigDecimal salary = scanner.nextBigDecimal();
 
     System.out.println("salário antes do reajuste: R$ " + salary);
