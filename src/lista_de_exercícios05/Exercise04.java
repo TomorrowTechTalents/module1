@@ -16,10 +16,10 @@ public class Exercise04 {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("limite de velocidade em km/h: ");
+        System.out.print("valor do limite de velocidade em km/h: ");
         double speedLimit = scanner.nextDouble();
 
-        System.out.print("velocidade registrada, em km/h: ");
+        System.out.print("valor da velocidade registrada, em km/h: ");
         double drivingSpeed = scanner.nextDouble();
 
         double overspeed = drivingSpeed - speedLimit;
