@@ -10,12 +10,12 @@ public class Exercise06 {
 
     BigDecimal valueInBRL = scanner.nextBigDecimal();
 
-    float USDRate = 4.70f;
-    float EURRate = 5.11f;
-    float GBPRate = 6.12f;
+    BigDecimal USDRate = new BigDecimal("4.70");
+    BigDecimal EURRate = new BigDecimal("5.11");
+    BigDecimal GBPRate = new BigDecimal("6.12");
 
-    System.out.println("valor em dólares americanos: $ " + valueInBRL.divide(BigDecimal.valueOf(USDRate), 2, RoundingMode.HALF_EVEN));
-    System.out.println("valor em euros: € " + valueInBRL.divide(BigDecimal.valueOf(EURRate), 2, RoundingMode.HALF_EVEN));
-    System.out.println("valor em libras esterlinas: £ " + valueInBRL.divide(BigDecimal.valueOf(GBPRate), 2, RoundingMode.HALF_EVEN));
+    System.out.println("valor em dólares americanos: $ " + valueInBRL.divide(USDRate, 2, RoundingMode.HALF_EVEN);
+    System.out.println("valor em euros: € " + valueInBRL.divide(EURRate, 2, RoundingMode.HALF_EVEN));
+    System.out.println("valor em libras esterlinas: £ " + valueInBRL.divide(GBPRate, 2, RoundingMode.HALF_EVEN));
   }
 }
