@@ -25,10 +25,10 @@ public class Exercise05 {
                 System.out.print("número de telefone: ");
                 String phoneNumber = scanner.nextLine();
 
-                System.out.print("idade: ");
+                System.out.print("idade, em anos: ");
                 short age = scanner.nextShort(); // ver se precisa do scanner.nextLine em branco para o \n
 
-                Contact contact = new Contact(personCode, phoneNumber, age); // -> essas 4 linhas para um metodo chamado criar contato
+                Contact contact = new Contact(personCode, phoneNumber, age); // --> essas 4 linhas para um método chamado criar contato
 
                 contacts = Contact.addInArray(contact, contacts);
             } else if (option == 2) {
@@ -44,6 +44,8 @@ public class Exercise05 {
                 }
             } else if (option == 3) {
                 Contact.printArray(contacts);
+            } else if (option == 4) {
+                break;
             } else {
                 throw new IllegalArgumentException();
             }
@@ -81,7 +83,7 @@ class Contact {
         return newArray;
     }
 
-    static int findIndexToRemove(String personCode, Contact[] contacts) { // acho que esse nao pertence aqui
+    static int findIndexToRemove(String personCode, Contact[] contacts) { // talvez esse nao pertence aqui
         for (int i = 0; i < contacts.length; i++) {
             if (contacts[i].personCode.equals(personCode)) { // equals?
                 return i;
@@ -93,10 +95,10 @@ class Contact {
 
     static void printArray(Contact[] contacts) {
         for (int i = 0; i < contacts.length; i++) {
-            System.out.print("contato #" + (i + 1) + " - ");
-            System.out.print(contacts[i].personCode + " ");
-            System.out.print(contacts[i].phoneNumber + " ");
-            System.out.println(contacts[i].age);
+            System.out.print("contato #" + (i + 1) + ": ");
+            System.out.print("código da pessoa - " + contacts[i].personCode + " | ");
+            System.out.print("número de telefone - " + contacts[i].phoneNumber + " | ");
+            System.out.println("idade - " + contacts[i].age + " ano(s)");
         }
     }
 }
