@@ -8,6 +8,8 @@ import java.text.NumberFormat;
 
 public class Exercise13 {
   public static void main(String[] args) {
+    Locale.setDefault(new Locale("pt", "BR"));
+
     Scanner scanner = new Scanner(System.in);
     NumberFormat numberFormat = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
 

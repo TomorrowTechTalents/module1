@@ -1,9 +1,12 @@
 package lista_de_exercícios01;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Exercise01 {
   public static void main(String[] args) {
+    Locale.setDefault(new Locale("pt", "BR"));
+
     Scanner scanner = new Scanner(System.in);
 
     System.out.print("valor de uma temperatura em graus Celsius para ser convertido: ");
