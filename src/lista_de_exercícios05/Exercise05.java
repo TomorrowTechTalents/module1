@@ -13,7 +13,7 @@ public class Exercise05 {
             System.out.println("escolha uma opção: ");
             System.out.println("1 > inserir um contato");
             System.out.println("2 > remover um contato");
-            System.out.println("3 > listar contatos");
+            System.out.println("3 > listar contatos"); //findcontactbypersoncode para apagar?
             System.out.println("4 > sair");
 
             byte option = scanner.nextByte();

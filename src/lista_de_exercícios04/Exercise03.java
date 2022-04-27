@@ -23,7 +23,7 @@ public class Exercise03 {
         largestValue = values[largestValuePositions[0]][largestValuePositions[1]];
 
         System.out.println("maior valor: " + largestValue);
-        System.out.println("na posição: " + largestValuePositions[0] + ", " + largestValuePositions[1]);
+        System.out.println("na posição: [" + largestValuePositions[0] + "][" + largestValuePositions[1] + "]");
     }
 
     static int[] findPositionOfLargestValue(double[][] values) {
@@ -43,7 +43,6 @@ public class Exercise03 {
             }
         }
 
-        int[] positions = {firstPosition, secondPosition};
-        return positions;
+        return new int[] {firstPosition, secondPosition};
     }
 }
