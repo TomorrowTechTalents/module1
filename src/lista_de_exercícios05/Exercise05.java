@@ -18,36 +18,39 @@ public class Exercise05 {
             byte option = scanner.nextByte();
             scanner.nextLine();
 
-            if (option == 1) {
-                System.out.print("código da pessoa: ");
-                String personCode = scanner.nextLine();
+            try {
+                if (option == 1) {
+                    System.out.print("código da pessoa: ");
+                    String personCode = scanner.nextLine();
 
-                System.out.print("número de telefone: ");
-                String phoneNumber = scanner.nextLine();
+                    System.out.print("número de telefone: ");
+                    String phoneNumber = scanner.nextLine();
 
-                System.out.print("idade, em anos: ");
-                short age = scanner.nextShort(); // ver se precisa do scanner.nextLine em branco para o \n
+                    System.out.print("idade, em anos: ");
+                    short age = scanner.nextShort();
 
-                Contact contact = new Contact(personCode, phoneNumber, age); // --> essas 4 linhas para um método chamado criar contato
+                    Contact contact = new Contact(personCode, phoneNumber, age); // --> essas 4 linhas para um método chamado criar contato
 
-                contacts = Contact.addInArray(contact, contacts);
-            } else if (option == 2) {
-                System.out.print("código da pessoa a ser removida: ");
-                String personCodeToBeRemoved = scanner.nextLine();
+                    contacts = Contact.addInArray(contact, contacts);
+                } else if (option == 2) {
+                    System.out.print("código da pessoa a ser removida: ");
+                    String personCodeToBeRemoved = scanner.nextLine();
 
-                int indexToBeRemoved = Contact.findIndexToRemove(personCodeToBeRemoved, contacts);
+                    int indexToBeRemoved = Contact.findIndexToRemove(personCodeToBeRemoved, contacts); // --> get index to be removed? find by personcode?
 
-                if (indexToBeRemoved >= 0) {
-                    contacts = Contact.removeFromArray(indexToBeRemoved, contacts);
+                    if (indexToBeRemoved >= 0) {
+                        contacts = Contact.removeFromArray(indexToBeRemoved, contacts);
+                    } else {
+                        throw new IllegalArgumentException("código de pessoa não encontrado");
+                    }
+                } else if (option == 3) {
+                    Contact.printArray(contacts);
+                } else if (option == 4) {
+                    break;
                 } else {
-                    throw new IllegalArgumentException();
+                    throw new IllegalArgumentException("opção inválida");
                 }
-            } else if (option == 3) {
-                Contact.printArray(contacts);
-            } else if (option == 4) {
-                break;
-            } else {
-                throw new IllegalArgumentException();
+            } catch (IllegalArgumentException exception) {
             }
         }
     }
