@@ -14,7 +14,7 @@
 
 06 - conversão de valor monetário
 
-07 - 4 operações aritméticas básicas
+07 – 4 operações aritméticas básicas
 
 08 - consumo médio de combustível
 
@@ -28,6 +28,6 @@
 
 13 - preço de venda de um carro
 
-14 - área de 1 círculo
+14 — área de 1 círculo
 
 15 - ferraduras necessárias

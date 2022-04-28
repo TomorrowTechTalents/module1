@@ -1,10 +1,13 @@
 package lista_de_exercícios05;
 
+import java.util.Locale;
 import java.util.Scanner;
 import java.math.BigDecimal;
 
 public class Exercise02 {
     public static void main(String[] args) {
+        Locale.setDefault(new Locale("pt", "BR"));
+
         final BigDecimal LOW_SALARY_THRESHOLD = new BigDecimal("900");
         final BigDecimal MEDIUM_SALARY_THRESHOLD = new BigDecimal("1500");
         final BigDecimal HIGH_SALARY_THRESHOLD = new BigDecimal("2500");
@@ -42,11 +45,11 @@ public class Exercise02 {
         BigDecimal netSalary = grossSalary.subtract(discounts);
 
         System.out.println();
-        System.out.println("valor do Imposto de Renda: " + incomeTax);
-        System.out.println("salário mensal bruto: " + grossSalary);
-        System.out.println("contribuição sindical: " + unionDues);
-        System.out.println("valor do FGTS: " + FGTS);
-        System.out.println("salário mensal líquido: " + netSalary);
+        System.out.println("valor do Imposto de Renda:\t" + incomeTax);
+        System.out.println("salário mensal bruto:\t\t" + grossSalary);
+        System.out.println("contribuição sindical:\t\t" + unionDues);
+        System.out.println("valor do FGTS:\t\t\t\t" + FGTS);
+        System.out.println("salário mensal líquido:\t\t" + netSalary);
         System.out.println("valor descontado do salário mensal bruto: " + discounts);
     }
 }
