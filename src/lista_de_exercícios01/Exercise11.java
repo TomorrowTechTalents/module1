@@ -4,6 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.NumberFormat;
 
 public class Exercise11 {
   public static void main(String[] args) {
@@ -11,11 +12,16 @@ public class Exercise11 {
 
     Scanner scanner = new Scanner(System.in);
 
+    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
+
+    System.out.println("valor original: R$ ");
     BigDecimal totalValue = scanner.nextBigDecimal();
 
-    final int NUMBER_OF_INSTALLMENTS = 5;
+    final BigDecimal NUMBER_OF_INSTALLMENTS = new BigDecimal("5");
 
-    System.out.println("valor total: R$ " + totalValue);
-    System.out.println("valor de cada prestação: R$ " + totalValue.divide(BigDecimal.valueOf(NUMBER_OF_INSTALLMENTS), 2, RoundingMode.HALF_EVEN));
+    BigDecimal installmentPrice = totalValue.divide(NUMBER_OF_INSTALLMENTS, 2, RoundingMode.DOWN);
+
+    System.out.println("valor total: " + currencyFormat.format(installmentPrice.multiply(NUMBER_OF_INSTALLMENTS)));
+    System.out.println("valor de cada prestação: " + currencyFormat.format(installmentPrice));
   }
 }

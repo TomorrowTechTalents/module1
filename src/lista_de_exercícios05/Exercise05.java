@@ -51,6 +51,9 @@ public class Exercise05 {
                     throw new IllegalArgumentException("opção inválida");
                 }
             } catch (IllegalArgumentException exception) {
+                // placeholder
+            } finally {
+                System.out.println("\n==========\n");
             }
         }
     }
@@ -68,11 +71,13 @@ class Contact {
     }
 
     static Contact[] addInArray(Contact contact, Contact[] contacts) {
-        Contact [] newArray = new Contact[contacts.length + 1];
+        Contact[] newArray = new Contact[contacts.length + 1];
 
         System.arraycopy(contacts, 0, newArray, 0, contacts.length);
 
         newArray[contacts.length] = contact;
+
+        System.out.println("Contato adicionado com sucesso!");
 
         return newArray;
     }

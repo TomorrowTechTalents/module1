@@ -11,16 +11,17 @@ public class Exercise13 {
     Locale.setDefault(new Locale("pt", "BR"));
 
     Scanner scanner = new Scanner(System.in);
-    NumberFormat numberFormat = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
 
+    System.out.print("preço de custo: ");
     BigDecimal costPrice = scanner.nextBigDecimal();
+
     BigDecimal sellerPercentual = new BigDecimal("0.28");
     BigDecimal taxesPercentual = new BigDecimal("0.45");
 
     BigDecimal factoryPercentual = BigDecimal.ONE.subtract(sellerPercentual).subtract(taxesPercentual);
-
     BigDecimal sellingPrice = costPrice.divide(factoryPercentual, 2, RoundingMode.HALF_EVEN);
 
-    System.out.println("preço de venda: " + numberFormat.format(sellingPrice));
+    System.out.println("preço de venda: " + currencyFormat.format(sellingPrice));
   }
 }
