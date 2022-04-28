@@ -1,5 +1,6 @@
 package lista_de_exercícios02;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 class Beach {
@@ -14,6 +15,8 @@ class Beach {
 
 public class Exercise04 {
   public static void main(String[] args) {
+    Locale.setDefault(new Locale("pt", "BR"));
+
     final int NUMBER_OF_BEACHES = 5;
     final double LOWER_BOUND_DISTANCE = 10;
     final double UPPER_BOUND_DISTANCE = 15;
@@ -27,7 +30,9 @@ public class Exercise04 {
     double sumOfDistances = 0;
 
     for (int i = 0; i < NUMBER_OF_BEACHES; i++) {
+      System.out.print("nome da praia: ");
       name = scanner.nextLine();
+      System.out.print("distância, em km: ");
       distance = scanner.nextDouble();
       scanner.nextLine();
 
@@ -40,7 +45,7 @@ public class Exercise04 {
 
     System.out.println("há "+ findBeachesInRange(beaches, NUMBER_OF_BEACHES, LOWER_BOUND_DISTANCE, UPPER_BOUND_DISTANCE).length + " praia(s) a mais de " + LOWER_BOUND_DISTANCE + " km e menos de " + UPPER_BOUND_DISTANCE + " km de distância");
 
-    System.out.println("média das distâncias das praias: " + sumOfDistances / NUMBER_OF_BEACHES );
+    System.out.println("média das distâncias das praias: " + sumOfDistances / NUMBER_OF_BEACHES + " km");
   }
 
   static Beach findMostDistantBeach(Beach[] beaches, int numberOfBeaches) {
