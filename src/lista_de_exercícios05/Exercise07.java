@@ -9,7 +9,7 @@ public class Exercise07 {
     public static void main(String[] args) {
         Locale.setDefault(new Locale("pt", "BR"));
 
-        final byte NUMBER_OF_TRANSACTIONS = 4;
+        final byte NUMBER_OF_TRANSACTIONS = 15;
         final BigDecimal NUMBER_OF_INSTALLMENTS = new BigDecimal("3");
 
         Scanner scanner = new Scanner(System.in);
