@@ -1,10 +1,13 @@
 package lista_de_exercícios01;
 
+import java.util.Locale;
 import java.util.Scanner;
 import java.math.BigDecimal;
 
 public class Exercise12 {
   public static void main(String[] args) {
+    Locale.setDefault(new Locale("pt", "BR"));
+
     Scanner scanner = new Scanner(System.in);
 
     BigDecimal costPrice = scanner.nextBigDecimal();

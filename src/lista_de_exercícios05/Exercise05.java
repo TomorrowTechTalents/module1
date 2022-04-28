@@ -1,6 +1,5 @@
 package lista_de_exercícios05;
 
-import java.security.InvalidParameterException;
 import java.util.Scanner;
 
 public class Exercise05 {
@@ -13,38 +12,45 @@ public class Exercise05 {
             System.out.println("escolha uma opção: ");
             System.out.println("1 > inserir um contato");
             System.out.println("2 > remover um contato");
-            System.out.println("3 > listar contatos");
+            System.out.println("3 > listar contatos"); //findcontactbypersoncode para apagar?
             System.out.println("4 > sair");
 
             byte option = scanner.nextByte();
             scanner.nextLine();
 
-            if (option == 1) {
-                System.out.print("código da pessoa: ");
-                String personCode = scanner.nextLine();
+            try {
+                if (option == 1) {
+                    System.out.print("código da pessoa: ");
+                    String personCode = scanner.nextLine();
 
-                System.out.print("número de telefone: ");
-                String phoneNumber = scanner.nextLine();
+                    System.out.print("número de telefone: ");
+                    String phoneNumber = scanner.nextLine();
 
-                System.out.print("idade: ");
-                short age = scanner.nextShort(); // ver se precisa do scanner.nextLine em branco para o \n
+                    System.out.print("idade, em anos: ");
+                    short age = scanner.nextShort();
 
-                Contact contact = new Contact(personCode, phoneNumber, age); // -> essas 4 linhas para um metodo chamado criar contato
+                    Contact contact = new Contact(personCode, phoneNumber, age); // --> essas 4 linhas para um método chamado criar contato
 
-                contacts = Contact.add(contact, contacts);
-            } else if (option == 2) {
-                System.out.print("código da pessoa a ser removida: ");
-                String personCodeToBeRemoved = scanner.nextLine();
+                    contacts = Contact.addInArray(contact, contacts);
+                } else if (option == 2) {
+                    System.out.print("código da pessoa a ser removida: ");
+                    String personCodeToBeRemoved = scanner.nextLine();
 
-                int indexToBeRemoved = Contact.findIndexToRemove(personCodeToBeRemoved, contacts);
+                    int indexToBeRemoved = Contact.findIndexToRemove(personCodeToBeRemoved, contacts); // --> get index to be removed? find by personcode?
 
-                if (indexToBeRemoved >= 0) {
-                    contacts = Contact.remove(indexToBeRemoved, contacts);
+                    if (indexToBeRemoved >= 0) {
+                        contacts = Contact.removeFromArray(indexToBeRemoved, contacts);
+                    } else {
+                        throw new IllegalArgumentException("código de pessoa não encontrado");
+                    }
+                } else if (option == 3) {
+                    Contact.printArray(contacts);
+                } else if (option == 4) {
+                    break;
                 } else {
-                    throw new IllegalArgumentException();
+                    throw new IllegalArgumentException("opção inválida");
                 }
-            } else {
-                throw new IllegalArgumentException();
+            } catch (IllegalArgumentException exception) {
             }
         }
     }
@@ -61,7 +67,7 @@ class Contact {
         this.age = age;
     }
 
-    static Contact[] add(Contact contact, Contact[] contacts) {
+    static Contact[] addInArray(Contact contact, Contact[] contacts) {
         Contact [] newArray = new Contact[contacts.length + 1];
 
         System.arraycopy(contacts, 0, newArray, 0, contacts.length);
@@ -71,7 +77,7 @@ class Contact {
         return newArray;
     }
 
-    static Contact[] remove(int indexToBeRemoved, Contact[] contacts) {
+    static Contact[] removeFromArray(int indexToBeRemoved, Contact[] contacts) {
         Contact[] newArray = new Contact[contacts.length - 1];
 
         System.arraycopy(contacts, 0, newArray, 0, indexToBeRemoved);
@@ -80,7 +86,7 @@ class Contact {
         return newArray;
     }
 
-    static int findIndexToRemove(String personCode, Contact[] contacts) {
+    static int findIndexToRemove(String personCode, Contact[] contacts) { // talvez esse nao pertence aqui
         for (int i = 0; i < contacts.length; i++) {
             if (contacts[i].personCode.equals(personCode)) { // equals?
                 return i;
@@ -88,5 +94,14 @@ class Contact {
         }
 
         return -1; //talvez uma constante not found
+    }
+
+    static void printArray(Contact[] contacts) {
+        for (int i = 0; i < contacts.length; i++) {
+            System.out.print("contato #" + (i + 1) + ": ");
+            System.out.print("código da pessoa - " + contacts[i].personCode + " | ");
+            System.out.print("número de telefone - " + contacts[i].phoneNumber + " | ");
+            System.out.println("idade - " + contacts[i].age + " ano(s)");
+        }
     }
 }

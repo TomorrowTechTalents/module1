@@ -1,9 +1,12 @@
 package lista_de_exercícios01;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Exercise09 {
   public static void main(String[] args) {
+    Locale.setDefault(new Locale("pt", "BR"));
+
     Scanner scanner = new Scanner(System.in);
 
     String name = scanner.nextLine();

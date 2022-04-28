@@ -29,6 +29,6 @@ public class Exercise05 {
             sum += values[position][i];
         }
 
-        return sum/dimension;
+        return (double) sum/dimension;
     }
 }

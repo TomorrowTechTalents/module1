@@ -1,10 +1,13 @@
 package lista_de_exercícios01;
 
+import java.util.Locale;
 import java.util.Scanner;
 import java.math.BigDecimal;
 
 public class Exercise03 {
   public static void main(String[] args) {
+    Locale.setDefault(new Locale("pt", "BR"));
+
     final BigDecimal INTEREST_RATE = new BigDecimal("0.02");
 
     Scanner scanner = new Scanner(System.in);

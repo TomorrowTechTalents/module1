@@ -6,8 +6,6 @@ public class Exercise02 {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
-    String resultMessage;
-
     while (true) {
       int number = scanner.nextInt();
 
@@ -16,8 +14,7 @@ public class Exercise02 {
       }
       else if (number < 0) {
         System.out.println("O número é negativo.");
-      }
-      else {
+      } else {
         break;
       }
     }

@@ -1,11 +1,14 @@
 package lista_de_exercícios01;
 
+import java.util.Locale;
 import java.util.Scanner;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class Exercise06 {
   public static void main(String[] args) {
+    Locale.setDefault(new Locale("pt", "BR"));
+
     Scanner scanner = new Scanner(System.in);
 
     System.out.print("valor em reais: R$ ");

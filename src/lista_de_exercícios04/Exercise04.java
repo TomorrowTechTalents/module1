@@ -18,10 +18,10 @@ public class Exercise04 {
             }
         }
 
-        System.out.println(sumOfAllValues(values));
+        System.out.println(sumAllValues(values));
     }
 
-    static int sumOfAllValues(int[][] values) {
+    static int sumAllValues(int[][] values) {
         int sum = 0;
         int dimension1 = values.length;
         int dimension2 = values[0].length;
