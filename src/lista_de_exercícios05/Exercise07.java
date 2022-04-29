@@ -1,9 +1,9 @@
 package lista_de_exercícios05;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.Locale;
 import java.util.Scanner;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Exercise07 {
     public static void main(String[] args) {

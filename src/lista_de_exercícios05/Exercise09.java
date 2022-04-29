@@ -57,7 +57,7 @@ public class Exercise09 {
             float grade3Weight = scanner.nextFloat();
 
             float weightedMean = (grade1 * grade1Weight + grade2 * grade2Weight + grade3 * grade3Weight) /
-                    (grade1Weight + grade2Weight + grade3Weight);
+                                 (grade1Weight + grade2Weight + grade3Weight);
 
             System.out.print("média ponderada: " + weightedMean);
         }
