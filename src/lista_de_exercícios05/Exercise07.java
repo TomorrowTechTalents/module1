@@ -1,6 +1,8 @@
 package lista_de_exercícios05;
 
+import java.util.Arrays;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.Scanner;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -14,7 +16,6 @@ public class Exercise07 {
 
         Scanner scanner = new Scanner(System.in);
 
-        boolean inInstallmentsSaleRegistered = false;
         BigDecimal sumOfValuesOfSalesInFull = BigDecimal.ZERO;
         BigDecimal sumOfValuesOfSalesInInstallments = BigDecimal.ZERO;
 
@@ -30,8 +31,6 @@ public class Exercise07 {
 
                 sumOfValuesOfSalesInFull = sumOfValuesOfSalesInFull.add(value);
             } else if (transactionCode == 'P') {
-                inInstallmentsSaleRegistered = true;
-
                 System.out.print("valor original da transação: R$ ");
 
                 BigDecimal originalValue = scanner.nextBigDecimal();
@@ -53,12 +52,12 @@ public class Exercise07 {
         System.out.println("valor total das compras a prazo: " + sumOfValuesOfSalesInInstallments);
         System.out.println("valor total das compras efetuadas: " + totalSalesValue);
 
-        if (inInstallmentsSaleRegistered) {
+        if (Arrays.stream(installmentsValues).anyMatch(Objects::nonNull)) {
             System.out.println("valor(es) da(s) prestação(ões) da(s) compra(s) a prazo: ");
 
             for (int i = 0; i < NUMBER_OF_TRANSACTIONS; i++) {
                 if (installmentsValues[i] != null) {
-                    System.out.println("compra " + i + ": " + installmentsValues[i]);
+                    System.out.println("compra " + (i + 1) + ": " + installmentsValues[i]);
                 }
             }
         }

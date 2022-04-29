@@ -21,9 +21,9 @@ public class Exercise06 {
         System.out.print("área a ser pintada, em m²: ");
         double area = scanner.nextDouble();
 
-        double paintVolume = area/PAINT_LITER_COVERAGE;
+        double paintVolume = area / PAINT_LITER_COVERAGE;
 
-        int numberOfPaintCans = getNumberOfPaintCans(paintVolume);
+        int numberOfPaintCans = (int) Math.ceil(paintVolume / PAINT_CAN_VOLUME);
 
         System.out.println("situação em que compram-se apenas latas de 18 litros:");
         System.out.println(" - quantidade de tinta a ser comprada: " + numberOfPaintCans * PAINT_CAN_VOLUME + " L");
@@ -31,30 +31,10 @@ public class Exercise06 {
 
         System.out.println("----------");
 
-        int numberOfPaintGallons = getNumberOfPaintGallons(paintVolume);
+        int numberOfPaintGallons = (int) Math.ceil(paintVolume / PAINT_GALLON_VOLUME);
 
         System.out.println("situação em que compram-se apenas galões de 3,6 litros:");
         System.out.println(" - quantidade de tinta a ser comprada: " + numberOfPaintGallons * PAINT_GALLON_VOLUME + " L");
         System.out.println(" - preço: " + BigDecimal.valueOf(numberOfPaintGallons).multiply(PAINT_GALLON_PRICE));
-    }
-
-    static int getNumberOfPaintCans(double paintVolume) {
-        int numberOfPaintCans = (int) (paintVolume / PAINT_CAN_VOLUME);
-
-        if (paintVolume/PAINT_CAN_VOLUME > numberOfPaintCans){
-            numberOfPaintCans++;
-        }
-
-        return numberOfPaintCans;
-    }
-
-    static int getNumberOfPaintGallons(double paintVolume) {
-        int numberOfPaintGallons = (int) (paintVolume / PAINT_GALLON_VOLUME);
-
-        if (paintVolume/PAINT_GALLON_VOLUME > numberOfPaintGallons){
-            numberOfPaintGallons++;
-        }
-
-        return numberOfPaintGallons;
     }
 }

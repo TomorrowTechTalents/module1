@@ -14,15 +14,12 @@ public class Exercise02 {
 
         Scanner scanner = new Scanner(System.in);
 
+        System.out.print("área a ser pintada, em m²: ");
         double area = scanner.nextDouble();
 
         double paintVolume = area/PAINT_LITER_COVERAGE;
 
-        int numberOfPaintCans = (int) (paintVolume / PAINT_CAN_VOLUME);
-
-        if (paintVolume/PAINT_CAN_VOLUME > numberOfPaintCans){
-            numberOfPaintCans++;
-        }
+        int numberOfPaintCans = (int) Math.ceil(paintVolume / PAINT_CAN_VOLUME);
 
         System.out.println("quantidade de latas de tinta a ser comprada: " + numberOfPaintCans);
         System.out.println("preço total: " + BigDecimal.valueOf(numberOfPaintCans).multiply(PAINT_CAN_PRICE));
