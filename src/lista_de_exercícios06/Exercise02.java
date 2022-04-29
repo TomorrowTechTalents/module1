@@ -1,10 +1,8 @@
 package lista_de_exercícios06;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
 import java.util.Locale;
 import java.util.Scanner;
+import java.math.BigDecimal;
 
 public class Exercise02 {
     public static void main(String[] args) {
@@ -18,13 +16,7 @@ public class Exercise02 {
 
         double area = scanner.nextDouble();
 
-        double paintVolume = area/PAINT_LITER_COVERAGE; // --> litro
-
-        //.setRoundingMode(RoundingMode.UP)
-
-//        DecimalFormat decimalFormat = new DecimalFormat("00");
-//
-//        decimalFormat.setRoundingMode(RoundingMode.CEILING);
+        double paintVolume = area/PAINT_LITER_COVERAGE;
 
         int numberOfPaintCans = (int) (paintVolume / PAINT_CAN_VOLUME);
 
