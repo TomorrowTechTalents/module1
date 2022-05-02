@@ -13,13 +13,13 @@ public class Exercise13 {
     Scanner scanner = new Scanner(System.in);
     NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
 
-    System.out.print("preço de custo: ");
+    System.out.print("preço de custo: R$ ");
     BigDecimal costPrice = scanner.nextBigDecimal();
 
-    BigDecimal sellerPercentual = new BigDecimal("0.28");
-    BigDecimal taxesPercentual = new BigDecimal("0.45");
+    final BigDecimal SELLER_PERCENTUAL = new BigDecimal("0.28");
+    final BigDecimal TAXES_PERCENTUAL = new BigDecimal("0.45");
 
-    BigDecimal factoryPercentual = BigDecimal.ONE.subtract(sellerPercentual).subtract(taxesPercentual);
+    BigDecimal factoryPercentual = BigDecimal.ONE.subtract(SELLER_PERCENTUAL).subtract(TAXES_PERCENTUAL);
     BigDecimal sellingPrice = costPrice.divide(factoryPercentual, 2, RoundingMode.HALF_EVEN);
 
     System.out.println("preço de venda: " + currencyFormat.format(sellingPrice));

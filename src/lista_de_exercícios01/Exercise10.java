@@ -13,7 +13,7 @@ public class Exercise10 {
 
     NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
 
-    System.out.println("valor, em reais: ");
+    System.out.println("valor: R$ ");
     BigDecimal value = scanner.nextBigDecimal();
 
     final BigDecimal INTEREST_RATE = new BigDecimal("0.007");

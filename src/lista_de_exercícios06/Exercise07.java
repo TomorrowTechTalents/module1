@@ -1,10 +1,10 @@
 package lista_de_exercícios06;
 
-import java.math.BigDecimal;
-import java.util.Collections;
 import java.util.List;
-import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.math.BigDecimal;
 
 public class Exercise07 {
     public static void main(String[] args) {
@@ -35,7 +35,7 @@ public class Exercise07 {
             BigDecimal litersPer1000km = BigDecimal.valueOf(1000 / fuelEfficiency.get(i));
 
             System.out.printf(" %d - %-16s-%7.1f -", (i + 1), carModels.get(i).toLowerCase(), fuelEfficiency.get(i));
-            System.out.printf("%7.1f litros - R$%7.2f\n", litersPer1000km, litersPer1000km.multiply(FUEL_PRICE));
+            System.out.printf("%7.1f litros - R$%7.2f%n", litersPer1000km, litersPer1000km.multiply(FUEL_PRICE));
         }
 
         double highestEfficiency = Collections.max(fuelEfficiency);
