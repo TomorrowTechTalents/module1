@@ -3,6 +3,7 @@ package lista_de_exercícios01;
 import java.util.Locale;
 import java.util.Scanner;
 import java.math.BigDecimal;
+import java.text.NumberFormat;
 
 public class Exercise03 {
   public static void main(String[] args) {
@@ -22,6 +23,8 @@ public class Exercise03 {
 
     BigDecimal finalAmount = startingAmount.multiply(totalInterest);
 
-    System.out.println("valor final: R$ " + finalAmount);
+    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
+
+    System.out.println("valor final: " + currencyFormat.format(finalAmount));
   }
 }

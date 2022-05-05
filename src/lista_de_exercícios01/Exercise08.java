@@ -9,9 +9,12 @@ public class Exercise08 {
 
     Scanner scanner = new Scanner(System.in);
 
+    System.out.print("valor da distância, em km: ");
     double distance = scanner.nextDouble();
-    double fuel = scanner.nextDouble();    
 
-    System.out.println("consumo médio = " + fuel / distance + "L/km");
+    System.out.print("valor do volume de combustível consumido, em L: ");
+    double fuel = scanner.nextDouble();
+
+    System.out.println("consumo médio: " + fuel / distance + " L/km");
   }
 }

@@ -9,10 +9,11 @@ public class Exercise14 {
 
     Scanner scanner = new Scanner(System.in);
 
+    System.out.print("raio: ");
     double radius = scanner.nextDouble();
 
     double area = Math.PI * radius * radius;
 
-    System.out.println("área = " + area);
+    System.out.println("área: " + area);
   }
 }
