@@ -1,4 +1,4 @@
-name: Build
+name: module1
 on:
   push:
     branches:
