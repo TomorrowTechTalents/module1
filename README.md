@@ -1,3 +1,5 @@
+[![Build](https://github.com/TomorrowTechTalents/module1/actions/workflows/build.yml/badge.svg)](https://github.com/TomorrowTechTalents/module1/actions/workflows/build.yml)
+
 # Listas de exercícios
 Resoluções dos exercícios passados.
 
