@@ -6,7 +6,7 @@ Soluções para a [6ª lista de exercícios](https://docs.google.com/document/d/
 
 2 - loja de tintas
 
-3 - controle de pesa
+3 - controle de pesca
 
 4 - estatísticas de trânsito
 
