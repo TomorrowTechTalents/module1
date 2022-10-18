@@ -9,19 +9,19 @@ public class Exercise03 {
         byte numberOfPositiveAnswers = 0;
 
         System.out.println("Telefonou para a vítima? [s|n]");
-        if (scanner.next().charAt(0) == 's') {numberOfPositiveAnswers++;}
+        if (scanner.next().charAt(0) == 's') { numberOfPositiveAnswers++; }
 
         System.out.println("Esteve no local do crime? [s|n]");
-        if (scanner.next().charAt(0) == 's') {numberOfPositiveAnswers++;}
+        if (scanner.next().charAt(0) == 's') { numberOfPositiveAnswers++; }
 
         System.out.println("Mora perto da vítima? [s|n]");
-        if (scanner.next().charAt(0) == 's') {numberOfPositiveAnswers++;}
+        if (scanner.next().charAt(0) == 's') { numberOfPositiveAnswers++; }
 
         System.out.println("Devia para a vítima? [s|n]");
-        if (scanner.next().charAt(0) == 's') {numberOfPositiveAnswers++;}
+        if (scanner.next().charAt(0) == 's') { numberOfPositiveAnswers++; }
 
         System.out.println("Já trabalhou com a vítima? [s|n]");
-        if (scanner.next().charAt(0) == 's') {numberOfPositiveAnswers++;}
+        if (scanner.next().charAt(0) == 's') { numberOfPositiveAnswers++; }
 
         String intervieweeStatus;
 

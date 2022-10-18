@@ -24,6 +24,6 @@ public class Exercise01 {
     System.out.print("3ª nota do aluno: ");
     double grade3 = scanner.nextDouble();
 
-    System.out.printf("média do aluno %s da turma %s: %.1f.\n", name, schoolClass, (grade1 + grade2 + grade3)/3);
+    System.out.printf("média do aluno %s da turma %s: %.1f.%n", name, schoolClass, (grade1 + grade2 + grade3)/3);
   }
 }

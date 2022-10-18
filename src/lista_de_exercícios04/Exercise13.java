@@ -24,7 +24,7 @@ public class Exercise13 {
         if (fuel == 'A') {
             fuelLiterPrice = alcoholLiterPrice;
 
-            if (volumeInLiters.compareTo(discountThreshold) <= 0) {
+            if (volumeInLiters.compareTo(discountThreshold) <= 0) { // ternarios
                 discount = alcoholSmallerDiscount;
             } else {
                 discount = alcoholLargerDiscount;

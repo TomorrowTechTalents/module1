@@ -30,7 +30,7 @@ public class Exercise10 {
 
         int numberOf1Bills = residualValue / 1;
 
-        int miminumNumberOfBills = numberOf100Bills + numberOf50Bills + numberOf20Bills +
+        int minimumNumberOfBills = numberOf100Bills + numberOf50Bills + numberOf20Bills +
                                numberOf10Bills + numberOf5Bills + numberOf2Bills + numberOf1Bills;
 
         System.out.println("O valor lido foi: " + value);
@@ -47,7 +47,7 @@ public class Exercise10 {
         }
 
         if (numberOf50Bills != 0) {
-            if (previousStringExists) {
+            if (previousStringExists) { // ternarios hein
                 System.out.print(", ");
             }
 
